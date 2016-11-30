@@ -21,7 +21,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.concurrent.RunnableFuture;
+
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -103,7 +103,44 @@ public class MainActivity extends Activity implements View.OnClickListener {
             target.createNewFile();
             FileWriter fw = new FileWriter(target.getAbsoluteFile());
             BufferedWriter bw = new BufferedWriter(fw);
-            String content = ""+System.currentTimeMillis();
+            String content = ""git ;
+            List<ScanResult> scanResults = ThatApp.getThatApp().getWifiManager().getScanResults();
+            for(ScanResult sr : scanResults)
+            {
+                if(sr.SSID.equals(ssid))
+                {
+                    content += ""+sr.BSSID+"|"+sr.level+"|"+"\n";
+                }
+            }
+            bw.write(content,0,content.length());
+            bw.close();
+
+
+        } catch(IOException ioe)
+        {
+            System.out.println(ioe.toString());
+            System.out.println(ioe.getStackTrace());
+        }
+        return x;
+    }
+
+    private int saveFileJSON(String ssid, int x, int y)
+    {
+        try{
+            File newDir = new File(Environment.getExternalStorageDirectory(),"wlanscan");
+            if(!newDir.exists()) {
+                newDir.mkdir();
+            }
+            String filename = "ergebnisse"+x+"-"+y+".log";
+            File target = new File(Environment.getExternalStorageDirectory() + "/wlanscan/", filename);
+            while(target.exists()) {
+                x++;
+                target = new File(Environment.getExternalStorageDirectory() + "/wlanscan/", "ergebnisse"+x+"-"+y+".log");
+            }
+            target.createNewFile();
+            FileWriter fw = new FileWriter(target.getAbsoluteFile());
+            BufferedWriter bw = new BufferedWriter(fw);
+            String content = "";
             List<ScanResult> scanResults = ThatApp.getThatApp().getWifiManager().getScanResults();
             for(ScanResult sr : scanResults)
             {
