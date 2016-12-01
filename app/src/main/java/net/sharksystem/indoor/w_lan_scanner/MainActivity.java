@@ -12,6 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -71,7 +75,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
 
         if(v == saveButton){
-            this.saveFile("BVG Wi-Fi",0,0);
+            this.saveFileJSON("ZFR",0,0);
         }
 
         if(v == saveIntervall){
@@ -88,43 +92,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * Speichern der momentanen aufnahme in eine Datei mit Timestamp
      */
     private int saveFile(String ssid, int x, int y)
-    {
-        try{
-            File newDir = new File(Environment.getExternalStorageDirectory(),"wlanscan");
-            if(!newDir.exists()) {
-                newDir.mkdir();
-            }
-            String filename = "ergebnisse"+x+"-"+y+".log";
-            File target = new File(Environment.getExternalStorageDirectory() + "/wlanscan/", filename);
-            while(target.exists()) {
-                x++;
-                target = new File(Environment.getExternalStorageDirectory() + "/wlanscan/", "ergebnisse"+x+"-"+y+".log");
-            }
-            target.createNewFile();
-            FileWriter fw = new FileWriter(target.getAbsoluteFile());
-            BufferedWriter bw = new BufferedWriter(fw);
-            String content = ""git ;
-            List<ScanResult> scanResults = ThatApp.getThatApp().getWifiManager().getScanResults();
-            for(ScanResult sr : scanResults)
-            {
-                if(sr.SSID.equals(ssid))
-                {
-                    content += ""+sr.BSSID+"|"+sr.level+"|"+"\n";
-                }
-            }
-            bw.write(content,0,content.length());
-            bw.close();
-
-
-        } catch(IOException ioe)
-        {
-            System.out.println(ioe.toString());
-            System.out.println(ioe.getStackTrace());
-        }
-        return x;
-    }
-
-    private int saveFileJSON(String ssid, int x, int y)
     {
         try{
             File newDir = new File(Environment.getExternalStorageDirectory(),"wlanscan");
@@ -157,6 +124,62 @@ public class MainActivity extends Activity implements View.OnClickListener {
         {
             System.out.println(ioe.toString());
             System.out.println(ioe.getStackTrace());
+        }
+        return x;
+    }
+
+    private int saveFileJSON(String ssid, int x, int y)
+    {
+        try{
+            JSONObject jObj = new JSONObject();
+            jObj.put("id","Placeholder");
+            jObj.put("zValue",0);
+
+            JSONObject signalInf = new JSONObject();
+            JSONArray signalInfList = new JSONArray();
+            JSONArray signalStrength = new JSONArray();
+            List<ScanResult> scanResults = ThatApp.getThatApp().getWifiManager().getScanResults();
+            for(ScanResult sr : scanResults)
+            {
+                if(sr.SSID.equals(ssid))
+                {
+                    JSONObject measurement = new JSONObject();
+                    measurement.put("macAdress",sr.BSSID);
+                    measurement.put("strength",sr.level);
+                    signalStrength.put(measurement);
+                }
+            }
+            signalInfList.put(signalStrength);
+            signalInf.put("timestamp","0000"); //PLACEHOLDER
+            signalInf.put("signalStrenghtInformationList", signalStrength);
+            jObj.put("signalInformationList",signalInf);
+
+            File newDir = new File(Environment.getExternalStorageDirectory(),"wlanscan");
+            if(!newDir.exists()) {
+                newDir.mkdir();
+            }
+            String filename = "ergebnisse"+x+"-"+y+".txt";
+            File target = new File(Environment.getExternalStorageDirectory() + "/wlanscan/", filename);
+            while(target.exists()) {
+                x++;
+                target = new File(Environment.getExternalStorageDirectory() + "/wlanscan/", "ergebnisse"+x+"-"+y+".log");
+            }
+            target.createNewFile();
+            FileWriter fw = new FileWriter(target.getAbsoluteFile());
+            BufferedWriter bw = new BufferedWriter(fw);
+            String content =jObj.toString();
+            bw.write(content,0,content.length());
+            bw.close();
+
+
+        } catch(IOException ioe)
+        {
+            System.out.println(ioe.toString());
+            System.out.println(ioe.getStackTrace());
+        }
+        catch(JSONException je)
+        {
+
         }
         return x;
     }
