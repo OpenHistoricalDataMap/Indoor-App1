@@ -238,7 +238,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         signalStrengthInformationList.put(signalStrengthInformation);
                     }
                 }
-                signalInformation.put("signalStrengthInformationList", signalStrengthInformationList);
+                signalInformation.put("signalStrength", signalStrengthInformationList);
                 signalInformationList.put(signalInformation);
                 Thread thread = new Thread(new Runnable() {
                     @Override
@@ -255,7 +255,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 });
                 timestamp +=1;
             }
-            node.put("signalInformationList",signalInformationList);
+            node.put("signalInformation",signalInformationList);
             File newDir = new File(Environment.getExternalStorageDirectory(),"wlanscan");
             if(!newDir.exists()) {
                 newDir.mkdir();
