@@ -3,30 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
-        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.1.1_844e6d3e9e8564a29fa3c7dc482ecec46aec1853/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/spaezzle/AndroidStudioProjects/spezanwLocation/IndoorNav/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.1.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
         <dex dex="/home/spaezzle/AndroidStudioProjects/spezanwLocation/IndoorNav/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.1.1_10650f9a9cdbf6e3e841564e893876fab5d31de8/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.1"
-        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
-        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.1.1_7b4213641ebe18a08099352e271606909c529ed3.jar" />
     </item>
     <item
         is-multidex="true"
@@ -47,15 +29,6 @@
         <dex dex="/home/spaezzle/AndroidStudioProjects/spezanwLocation/IndoorNav/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.1.1_9d05f841831c6a1b453e3b18f7b5c9940a4408ea/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
-        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.1.1_844e6d3e9e8564a29fa3c7dc482ecec46aec1853.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="/home/spaezzle/AndroidStudioProjects/spezanwLocation/IndoorNav/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
@@ -63,15 +36,6 @@
         revision="24.0.1"
         sha1="4f7835cc611991c563ff595c03766e6e47239c18">
         <dex dex="/home/spaezzle/AndroidStudioProjects/spezanwLocation/IndoorNav/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_96c36e7162de020ecc4a12bccfe19c093942a5bf/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f62e763609f65e47dc6c498760a4accf02776788">
-        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.1.1_1f9d6a8f421ac77ff78950e4bfdbe7609e5761ab.jar" />
     </item>
     <item
         is-multidex="true"
@@ -88,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="7f6208c9b4f1c4fc8172160548def3ba0427c6a6">
+        sha1="56a357aaf97028e1234fbbbb01ec60e881828d9e">
         <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6934e11e8adb1f3be6683297c3137da35b4d16a6/classes.dex" />
     </item>
     <item
@@ -101,22 +65,40 @@
         <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.1.1_1f9d6a8f421ac77ff78950e4bfdbe7609e5761ab/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="6d7d803871e3203465f71a163e7af104f807b446">
-        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.1.1_11a609215f9adc5509e0ce968b5b809da7030fc7.jar" />
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.1.1_7b4213641ebe18a08099352e271606909c529ed3/classes.dex" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/libs/internal_impl-24.1.1.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
-        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/pre-dexed/debug/internal_impl-24.1.1_8b283328821ecbb42d04258156264303627d8e53.jar" />
+        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.1.1_8b283328821ecbb42d04258156264303627d8e53/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/spaezzle/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.1/support-annotations-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="/home/spaezzle/AndroidStudioProjects/spezanwLocation/IndoorNav/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.1.1_0b933c85eb17f311dd9fae87dc347a1044a01531/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.1.1_844e6d3e9e8564a29fa3c7dc482ecec46aec1853/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,48 +120,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
-        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.1.1_7b4213641ebe18a08099352e271606909c529ed3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="ebe660b77900b207c0d65b67828e9d57f4c65315">
+        sha1="41624c3aa6e751b0daa9938f5724ac07fbb5885c">
         <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_be69e7eb5bfc74b64b2d57dc2d6b560b9abf11cf/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/spaezzle/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.1/support-annotations-24.1.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.1"
-        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
-        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/pre-dexed/debug/support-annotations-24.1.1_0b933c85eb17f311dd9fae87dc347a1044a01531.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/spaezzle/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.1/support-annotations-24.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
-        <dex dex="/home/spaezzle/AndroidStudioProjects/spezanwLocation/IndoorNav/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.1.1_0b933c85eb17f311dd9fae87dc347a1044a01531/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/libs/internal_impl-24.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
-        <dex dex="/home/spaezzle/Studium/5. Semester/SpezAnwendung/Indoor1/Indoor-App1/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.1.1_8b283328821ecbb42d04258156264303627d8e53/classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by Carola Walter on 12/1/16.
+ * Created by Carola Walter
+ * Changed by Christoph Bose
  */
 
 public class Node {
