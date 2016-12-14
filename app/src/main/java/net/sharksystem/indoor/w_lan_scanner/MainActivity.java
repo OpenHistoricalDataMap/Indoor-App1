@@ -7,10 +7,12 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiInfo;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Looper;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.os.Handler;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,6 +25,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -79,7 +84,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
 
         if(v == saveIntervall){
-            this.saveIntervallJSON("WLaLbSs");
+            this.saveIntervallJSON("ZFR");
         }
 
     }
@@ -218,13 +223,31 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private void saveIntervallJSON(String ssid)
     {
         int x =0;
+        Thread t = new Thread(new Runnable(){
+
+            int waitMilliseconds = 1000;
+
+            @Override
+            public void run() {
+                try {
+                    synchronized (this) {
+                        wait(waitMilliseconds);
+                        scanAgain();
+                        refresh();
+                    }
+                } catch (InterruptedException ex) {}
+            }
+        });
         try{
             JSONObject node = new JSONObject();
             node.put("id","PLACEHOLDER");
             node.put("zValue",0);
             JSONArray signalInformationList = new JSONArray();
-            int timestamp = 0;
-            for(int i = 0; i<10;i++){
+            String timestamp;
+            Date d;
+            for(int i = 0; i<20;i++){
+                d = new Date();
+                timestamp = d.toString();
                 JSONObject signalInformation = new JSONObject();
                 signalInformation.put("timestamp",timestamp);
                 JSONArray signalStrengthInformationList = new JSONArray();
@@ -240,20 +263,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 }
                 signalInformation.put("signalStrength", signalStrengthInformationList);
                 signalInformationList.put(signalInformation);
-                Thread thread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            synchronized (this) {
-                                wait(1000);
-                                scanAgain();
-                                refresh();
-                            }
-                        } catch (InterruptedException ie) {
-                        }
-                    }
-                });
-                timestamp +=1;
+                t.run();
             }
             node.put("signalInformation",signalInformationList);
             File newDir = new File(Environment.getExternalStorageDirectory(),"wlanscan");
